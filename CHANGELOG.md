@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.3] 2026-06-13
+
+### Fixed
+- Reduced false-positive diagnostics in valid Pine Script files, including loop ranges and typed field declarations.
+- Improved accuracy on real-world scripts so valid code is less likely to be marked as broken.
+
 ## [1.0.2] 2026-06-12
 
 ### Fixed

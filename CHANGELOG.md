@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.4] 2026-06-13
+## [1.0.5] 2026-06-13
 
 ### Fixed
 - Fixed false-positive `invalid-type-keyword` on UDT array types such as `OrderBlock[]` and `FVG[]`.

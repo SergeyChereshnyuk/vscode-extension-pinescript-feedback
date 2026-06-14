@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.7] 2026-06-14
+
+### Changed
+- Maintenance release with no functional changes.
+
 ## [1.0.6] 2026-06-13
 
 ### Improved

@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.0.10] 2026-06-15
+
+### Changed
+- Maintenance release with packaging and distribution refresh.
+
 ## [1.0.9] 2026-06-14
 
 ### Changed

@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.11] 2026-06-16
+
+### Improved
+- Improved editor responsiveness when diagnostics run on larger Pine Script files.
+
+### Fixed
+- Reduced false type-mismatch errors in valid function calls that pass integer values or loop counters.
+- Reduced false type-mismatch errors in valid named-argument calls, including text parameters and box coordinate arguments.
+- Reduced false undeclared-identifier errors in valid scripts.
+
 ## [1.0.10] 2026-06-15
 
 ### Changed

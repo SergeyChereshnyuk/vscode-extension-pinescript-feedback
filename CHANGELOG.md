@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.0.12] 2026-06-16
+
+### Added
+- Added diagnostics for self-referenced initializers and for too many arguments in `color.new()` calls.
+- Added a warning when historical indexing is used on variables declared in local conditional scopes, where values may be inconsistent across bars.
+
+### Fixed
+- Reduced false-positive function argument type errors by improving parameter position handling in local functions with mixed parameter qualifiers.
+- Improved symbol outline stability so document symbols no longer appear with empty names.
+
+### Improved
+- Improved diagnostic accuracy for complex line continuation and parenthesis/ternary patterns, with fewer duplicate or noisy messages.
+
 ## [1.0.11] 2026-06-16
 
 ### Improved

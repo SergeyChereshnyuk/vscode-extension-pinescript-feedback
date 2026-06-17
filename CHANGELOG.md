@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.13] 2026-06-17
+
+### Added
+- Expanded Pine Script language support with additional real-world script coverage.
+- Improved diagnostics coverage for more Pine Script patterns and scenarios.
+
 ## [1.0.12] 2026-06-16
 
 ### Added

@@ -1,5 +1,205 @@
 # Changelog
 
+## [1.1.6] 2026-06-24
+
+### Added
+- Introduced a "Rate Pine Script DevKit" prompt to gather user feedback.
+- Updated diagnostics to recognize new text alignment constants.
+
+### Fixed
+- Resolved an issue with null checks in the `tsCheckSameRowSiblings` function, improving diagnostic accuracy.
+
+### Improved
+- Enhanced diagnostics for better issue detection and reporting.
+
+## [1.1.5] 2026-06-24
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+- Improved documentation parsing by ignoring additional terms (`seealso` and `functionsummary`).
+- Optimized diagnostics provider to utilize cached context for better performance.
+
+## [1.1.4] 2026-06-23
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [1.1.3] 2026-06-23
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [1.1.2] 2026-06-23
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [1.1.1] 2026-06-23
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [1.1.0] 2026-06-22
+
+No user-visible changes in this release.
+
+## [1.0.30] 2026-06-21
+
+### Fixed
+- Resolved multiple false positives in diagnostics, improving precision and reducing unnecessary warnings.
+- Fixed issues with undeclared or incorrectly identified `strategy.*` members, ensuring accurate recognition of built-in members.
+- Enhanced handling of type references, generic arguments, and collection templates in diagnostics.
+- Corrected false positives related to assignment targets being flagged as undeclared.
+- Improved recognition of local declared value symbols over namespace interpretations for member checks.
+- Addressed issues with unused argument warnings and added support for drawing constructor types.
+
+## [1.0.29] 2026-06-21
+
+### Improved
+- Enhanced diagnostics precision to reduce false positives in various scenarios, including:
+  - Improved detection of unused routine arguments with specific exemptions for known compatibility parameters.
+  - Enhanced handling of same-row statements to ignore inline comments and string-only lines.
+  - Better detection of imported alias chained calls for cases like empty indicator bodies.
+- Updated diagnostics to correctly handle undeclared identifiers inside string literals.
+
+### Fixed
+- Resolved multiple false positives in diagnostics, including:
+  - Issues with combined vector bands.
+  - False positives related to unused arguments in specific functions (e.g., `f_calc_regime_events`, `f_open_position`, `drawLevelLabel`, etc.).
+  - Errors in detecting empty indicator bodies.
+  - False positives in "magic hour" diagnostics.
+
+## [1.0.28] 2026-06-21
+
+### Fixed
+- Resolved false positive undeclared-identifier diagnostics for `box.all` and `linefill.all` built-in drawing members.
+- Fixed false positive `line-continuation-error` diagnostics for `or/and` operators at the start of continuation lines with valid indentation.
+- Added a hardcoded exception for the `kvo` function's `src_open` parameter to suppress incorrect unused-function-argument diagnostics.
+
+## [1.0.27] 2026-06-20
+
+### Improved
+- Enhanced diagnostics for Pine Script built-ins and arguments:
+  - Improved recognition of additional built-in dotted identifiers such as `array.new`, `matrix.new`, `map.new`, `order`, `label.style_none`, and `label.style_*`.
+  - Reduced false positives for common Pine Script v6 patterns, including user-defined types (UDTs), enum type references, and generic constructors.
+  - Improved handling of underscore-prefixed function parameters and KDE-style `kernel` selectors to avoid incorrect unused-argument warnings.
+  - Enhanced diagnostics for use-before-declaration scenarios by preserving the first-seen top-level declaration.
+
+### Fixed
+- Resolved issues with diagnostics for positional parameter resolution in built-in functions, reducing potential runtime errors.
+
+## [1.0.26] 2026-06-20
+
+No user-visible changes in this release.
+
+## [1.0.25] 2026-06-20
+
+### Added
+- Introduced new diagnostics for tuple subscript/type mismatches, unused routine arguments, UDT constructor na/bool mismatches, if/else branch return-type mismatches, method-in-type-body, builtin const-param series/type mismatches, undeclared namespace members, script-declaration placement, and indicator-empty-body fallback.
+- Enhanced use-before-declaration logic for builtin identifiers and user-callable detection.
+- Added namespace/series inference helpers.
+- Added text diagnostics for line-continuation issues, chained bracket mismatches, leading boolean continuation, and numeric-assignment LHS errors.
+
+### Improved
+- Enhanced diagnostic coverage for declaration parsing consistency and indicator-empty-body detection.
+
+## [1.0.24] 2026-06-20
+
+### Fixed
+- Resolved false positives in diagnostics for various scenarios:
+  - Fixed incorrect "undeclared identifier" errors by improving identifier binding checks.
+  - Addressed false positives for `box.new` right-argument type inference, ensuring proper handling of numeric and explicitly declared float arguments.
+  - Fixed duplicate parameter argument errors for `plotshape` when using assignment-like named arguments.
+  - Resolved false positives for same-row typed declaration continuations in diagnostics.
+
+### Improved
+- Enhanced diagnostic precision by refining logic for named argument parsing and type inference.
+
+## [1.0.23] 2026-06-20
+
+### Fixed
+- Resolved false-positive `line-continuation-error` diagnostics for valid chained or wrapped ternary expressions.
+- Improved detection of malformed typed-declaration initializers and undeclared identifiers in `script_declaration` arguments.
+- Enhanced diagnostic messaging for same-row statement errors to provide clearer guidance.
+
+## [1.0.22] 2026-06-19
+
+### Fixed
+- Resolved an issue where scripts importing libraries incorrectly triggered visual/empty-script diagnostics.
+- Fixed false duplicate-parameter-argument diagnostics for specific plot functions (`plotcandle`, `plotbar`, `plotchar`, `plotshape`) when positional title arguments were misinterpreted as color parameters.
+- Improved handling of multi-line ternary operators by correctly recognizing continuation lines containing the outer `:` at the appropriate parenthesis depth.
+
+## [1.0.21] 2026-06-19
+
+No user-visible changes in this release.
+
+## [1.0.20] 2023-10-05
+
+### Improved
+- Enhanced diagnostics for better alignment with TradingView behavior, including improved error messages for ternary operators, color parameter usage, and input.source default values.
+- Reduced false positives in diagnostics by removing outdated checks for shadowing built-in variables.
+- Improved performance of diagnostics by optimizing code line scanning, reducing processing time for large scripts.
+
+## [1.0.19] 2023-10-19
+
+### Added
+- Introduced telemetry boundary to capture and log runtime errors during extension operations (e.g., status bar updates, diagnostics, code lens refresh).
+
+### Fixed
+- Resolved false positives in `box.new` right argument type validation.
+- Improved symbol extraction and classification in the Outline view, including better handling of `input.*` declarations and deterministic sorting.
+
+### Improved
+- Enhanced symbol provider to ensure consistent label, detail, and kind between AST and regex paths, with stable ordering for symbols.
+- Populated `DocumentSymbol.children` for type internals with valid range containment.
+
+## [1.0.18] 2023-10-05
+
+### Added
+- Support for `force_overlay` named argument in `bgcolor` function for Pine Script v6.
+
+### Fixed
+- Resolved an issue where user-defined type (UDT) symbols could leak between documents, ensuring symbol completions are scoped to the active document.
+
+## [1.0.17] 2023-10-05
+
+### Added
+- Enhanced Pine Script DevKit recommendations and IntelliSense support, providing improved context-aware suggestions and overload handling for function calls and parameters.
+
+### Fixed
+- Improved named-argument validation for built-in functions to prevent false diagnostics.
+
+## [1.0.16] 2023-10-05
+
+### Added
+- Expanded snippet catalog with new entries and collision-safe aliases for improved usability.
+
+### Improved
+- Enhanced snippet descriptions for better clarity and streamlined user experience.
+
+## [1.0.15] 2023-10-05
+
+### Fixed
+- Improved numeric inference for function parameters to better distinguish between integers and floats, reducing false-positive diagnostics.
+- Enhanced string/number prefix checks to handle various edge cases, preventing spurious errors in diagnostics.
+
+### Improved
+- Semantic tokenization now highlights the dot operator in import member access for better code readability.
+
+## [1.0.14] 2023-10-05
+
+### Added
+- Introduced optional Sentry crash reporting for improved error tracking. Users can opt-in via new settings under `pinescript.telemetry.sentry.*`.
+- Added detailed documentation on Sentry telemetry behavior in the README.
+
+### Fixed
+- Resolved false-positive diagnostics related to self-referencing initializers, function argument type mismatches, and line continuation errors.
+- Improved handling of comments, strings, and parentheses in diagnostics to reduce noise and prevent spurious errors.
+
+### Improved
+- Enhanced diagnostics parsing logic to provide more accurate error reporting and reduce false positives.
+- Increased test coverage for edge cases in diagnostics, including string handling, line continuation, and argument type mismatches.
+
 ## [1.0.13] 2026-06-17
 
 ### Added

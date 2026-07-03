@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.7.6] 2026-07-03
+
+### Fixed
+- Reduced false positive diagnostics for `request.security`-related code, making history and reachability checks more accurate.
+- Fixed VSIX verification so releases include the newly added localization file without failing validation.
+
+### Added
+- Added limited support for virtual workspaces in the extension manifest.
+
 ## [1.7.5] 2026-07-03
 
 ### Added
@@ -32,7 +41,7 @@
 ### Added
 - Clickable **View in Pine Script Reference** links in hover, completion documentation, and signature help for built-in Pine Script symbols, opening the official TradingView v6 reference page for that function, constant, or variable.
 - Declared Workspace Trust support so Pine Script language features remain available in Restricted Mode; the `@pinescript` chat assistant and workspace theme overrides require granting trust to the workspace.
-- Declared limited virtual workspace support so Pine Script language features remain available when browsing remote repositories (for example GitHub Repositories); local import resolution and workspace-wide reference search are not supported yet.
+- Declared limited virtual workspace support so Pine Script language features remain available when browsing remote repositories (for example GitHub Repositories); local import path resolution via `workspace.fs` and Go to Definition on resolvable imports; workspace-wide reference search is not supported.
 
 ### Removed
 - Removed the custom status bar item that showed Pine Script version (`Pine Script v6`), which duplicated the built-in language indicator. Version issues are still reported via diagnostics (`//@version` missing or non-v6).

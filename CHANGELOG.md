@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.7.5] 2026-07-03
+
+### Added
+- TradingView reference links now appear in IntelliSense, hover details, and signature help for built-in functions.
+- Workspace Trust support keeps language features available in Restricted Mode, while chat and workspace theme overrides remain gated until trust is granted.
+
+### Fixed
+- Reduced false positives for CW10003 on `ta.highest` / `ta.lowest` helpers called only inside `request.security` expressions (including Donchian / HTF cache patterns such as `supertrend_dqn.pine`).
+- Reduced false positives for CW10003 on transitive drawing-only routines.
+- Improved CW10004 behavior for user-defined security wrappers in lazy ternaries so warnings better match the intended parity rules.
+
 ## [1.7.3] 2026-07-02
 
 ### Fixed

@@ -93,6 +93,9 @@
 
 ## [Unreleased]
 
+### Fixed
+- Restored CW10003 on user-defined routines (for example `f_donchian`) called inside conditional HTF refresh guards that wrap `request.security` expressions, matching TradingView compiler behavior on patterns such as `supertrend_dqn.pine`. Built-in `ta.*` nodes inside those routine bodies remain deduplicated; inlined `ta.*` inside security expressions remain CW10002-exempt.
+
 ### Improved
 - Updated README and walkthrough content to match the current product surface (namespace IntelliSense, version diagnostics, and doc-reference links) and removed stale references to the deleted Pine Script Explorer, custom version status bar, and comment URL click-through.
 

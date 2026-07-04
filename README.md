@@ -30,35 +30,35 @@ Pine Script DevKit enhances the editing experience with syntax highlighting, nav
 
 **Navigation:**
 
-- **Symbol Navigation** — Go to Definition, **Go to Type Definition**, Find All References, and Rename Symbol
-- **Workspace symbols** — Go to Symbol in Workspace (`Cmd+T` / `Ctrl+T`) for user-defined Pine symbols across open and saved `.pine` files (`pinescript.workspaceSymbols.enable`)
-- **Document Outline** — functions, variables, UDTs, and inputs in breadcrumbs and the Outline panel
-- **Code Lens** — usage count above every user-defined function
-- **Smart Folding** — function bodies, `type` blocks, and `// #region` markers
-- **Document Highlight** — all occurrences of the symbol under the cursor in real time
-- **Document links** — clickable links on built-in call sites and field access (TradingView reference when enabled), the `//@version=6` header, and resolvable local import paths (not arbitrary URLs in comments or strings)
+- **Symbol Navigation**: Go to Definition, **Go to Type Definition**, Find All References, and Rename Symbol
+- **Workspace symbols**: Go to Symbol in Workspace (`Cmd+T` / `Ctrl+T`) for user-defined Pine symbols across open and saved `.pine` files (`pinescript.workspaceSymbols.enable`)
+- **Document Outline**: functions, variables, UDTs, and inputs in breadcrumbs and the Outline panel
+- **Code Lens**: usage count above every user-defined function
+- **Smart Folding**: function bodies, `type` blocks, and `// #region` markers
+- **Document Highlight**: all occurrences of the symbol under the cursor in real time
+- **Document links**: clickable links on built-in call sites and field access (TradingView reference when enabled), the `//@version=6` header, and resolvable local import paths (not arbitrary URLs in comments or strings)
 
 **Editing tools:**
 
-- **40+ Snippets** — indicator, strategy, and library scaffolds, TA patterns, control flow, drawing objects, and tables
-- **File Templates** — new Indicator or Strategy files via the Command Palette (**Pine Script: New Indicator** / **Pine Script: New Strategy**) or keyboard shortcuts
-- **Inlay hints** — inferred types, effective overlay on `indicator()` / `strategy()` calls, and optional parameter names at call sites (`pinescript.inlayHints.enable`)
-- **Inline completions** — opt-in Pine-specific ghost text for narrow patterns such as the version header (`pinescript.inlineCompletions.enable`, off by default to avoid overlapping Copilot)
-- **Auto-Formatter** — document format, format selection, and on-type formatting; normalizes 4-space indentation, trims trailing whitespace, and collapses excess blank lines
-- **Color Picker** — inline picker for `#RRGGBB`, `color.rgb()`, and all `color.*` named constants
-- **Code Actions** — quick fixes to add `//@version=6`, add `overlay=`, or wrap a block with `barstate.isconfirmed`
-- **Built-in discovery** — type `ta.`, `math.`, `strategy.`, or any namespace prefix to browse 200+ built-in functions with hover docs and signature help
-- **Version diagnostics** — missing or non-v6 `//@version` declarations appear in the Problems panel; use the quick fix code action to add `//@version=6`
-- **Reference links** — **View in Pine Script Reference** links in hover, completion details, and signature help open the official TradingView v6 page for built-in symbols (toggle with `pinescript.hover.showDocLinks`)
+- **40+ Snippets**: indicator, strategy, and library scaffolds, TA patterns, control flow, drawing objects, and tables
+- **File Templates**: new Indicator or Strategy files via the Command Palette (**Pine Script: New Indicator** / **Pine Script: New Strategy**) or keyboard shortcuts
+- **Inlay hints**: inferred types, effective overlay on `indicator()` / `strategy()` calls, and optional parameter names at call sites (`pinescript.inlayHints.enable`)
+- **Inline completions**: opt-in Pine-specific ghost text for narrow patterns such as the version header (`pinescript.inlineCompletions.enable`, off by default to avoid overlapping Copilot)
+- **Auto-Formatter**: document format, format selection, and on-type formatting; normalizes 4-space indentation, trims trailing whitespace, and collapses excess blank lines
+- **Color Picker**: inline picker for `#RRGGBB`, `color.rgb()`, and all `color.*` named constants
+- **Code Actions**: quick fixes to add `//@version=6`, add `overlay=`, or wrap a block with `barstate.isconfirmed`
+- **Built-in discovery**: type `ta.`, `math.`, `strategy.`, or any namespace prefix to browse 200+ built-in functions with hover docs and signature help
+- **Version diagnostics**: missing or non-v6 `//@version` declarations appear in the Problems panel; use the quick fix code action to add `//@version=6`
+- **Reference links**: **View in Pine Script Reference** links in hover, completion details, and signature help open the official TradingView v6 page for built-in symbols (toggle with `pinescript.hover.showDocLinks`)
 
 ---
 
 ## Imports and Libraries
 
-- **Library scaffolds** — use the `library` snippet prefix (there is no separate New Library file command)
-- **Local imports** — `import` paths resolve via the workspace file system; Go to Definition and document links work on resolvable local targets
-- **Virtual workspaces** — edit Pine in remote and virtual workspaces (for example [vscode.dev](https://vscode.dev) and GitHub Repositories) with diagnostics, IntelliSense, formatting, and local import support where workspace trust allows
-- **Limitation** — workspace-wide reference search is not supported in virtual workspaces
+- **Library scaffolds**: use the `library` snippet prefix (there is no separate New Library file command)
+- **Local imports**: `import` paths resolve via the workspace file system; Go to Definition and document links work on resolvable local targets
+- **Virtual workspaces**: edit Pine in remote and virtual workspaces (for example [vscode.dev](https://vscode.dev) and GitHub Repositories) with diagnostics, IntelliSense, formatting, and local import support where workspace trust allows
+- **Limitation**: workspace-wide reference search is not supported in virtual workspaces
 
 ---
 
@@ -69,19 +69,17 @@ Pine Script DevKit includes a dedicated GitHub Copilot Chat participant and Copi
 Use `@pinescript` in Copilot Chat to ask language-specific questions, explain code, generate Pine Script scaffolds, and get help while working in your project:
 
 - `@pinescript how do I draw a horizontal line at the highest high of the last 20 bars?`
-- `@pinescript /explain` — explain the selected Pine Script code
-- `@pinescript /indicator` — generate an indicator scaffold
-- `@pinescript /strategy` — generate a new strategy scaffold
+- `@pinescript /explain`: explain the selected Pine Script code
+- `@pinescript /indicator`: generate an indicator scaffold
+- `@pinescript /strategy`: generate a new strategy scaffold
 
 **Agent mode tools** (enable in Copilot Agent mode when a `.pine` file is in context):
 
-| Tool | Purpose |
-|------|---------|
-| `#lookupBuiltin` | Built-in signatures and docs from local metadata |
-| `#getDiagnostics` | Current Pine diagnostics for the active editor |
-| `#scaffold` | Indicator or strategy starter template (text only) |
-| `#applyScaffold` | Write a scaffold to the workspace (requires folder + trust) |
-| `#suggestFix` | Remediation hints for diagnostic codes |
+- **`#lookupBuiltin`**: built-in signatures and docs from local metadata
+- **`#getDiagnostics`**: current Pine diagnostics for the active editor
+- **`#scaffold`**: indicator or strategy starter template (text only)
+- **`#applyScaffold`**: write a scaffold to the workspace (requires folder + trust)
+- **`#suggestFix`**: remediation hints for diagnostic codes
 
 Bundled **chat instructions**, **prompt files** (review, fix diagnostics, new indicator), and the **pine-indicator** skill attach automatically when a `.pine` file is in context.
 
@@ -95,12 +93,10 @@ Pine Script DevKit and its AI features do not provide investment advice, trading
 
 ## Platforms
 
-| Environment | Support |
-|-------------|---------|
-| **VS Code desktop** | Full language features and Copilot integration |
-| **VS Code for the web** | Web extension bundle; language features and AI when Copilot and trust allow |
-| **Virtual workspaces** | Remote repos and vscode.dev; see [Imports and Libraries](#imports-and-libraries) for reference-search limits |
-| **Restricted Mode** | Pine LSP features work; `@pinescript`, `#applyScaffold`, and workspace theme overrides require trust |
+- **VS Code desktop**: full language features and Copilot integration
+- **VS Code for the web**: web extension bundle; language features and AI when Copilot and trust allow
+- **Virtual workspaces**: remote repos and vscode.dev; see [Imports and Libraries](#imports-and-libraries) for reference-search limits
+- **Restricted Mode**: Pine LSP features work; `@pinescript`, `#applyScaffold`, and workspace theme overrides require trust
 
 ---
 
@@ -130,17 +126,15 @@ A custom `.pine` file icon is included and adapts to both light and dark editor 
 
 ## Commands and Shortcuts
 
-| Action | How to run |
-|--------|------------|
-| **New Indicator** | Command Palette, Explorer context menu, `⌘⌥I` (macOS) / `Ctrl+Alt+I` (Windows/Linux), or [deep link](vscode://chereshnyuk.chereshnyuk-com-pinescript/command/newIndicator) |
-| **New Strategy** | Command Palette, Explorer context menu, `⌘⌥S` / `Ctrl+Alt+S` |
-| **Format Document** | Command Palette (**Pine Script: Format Document**), editor title run action, or `pinescript.formatDocument` |
-| **View Release Notes** | Command Palette (**Pine Script: View Release Notes**) |
-| **Go to Definition** | `F12` |
-| **Go to Type Definition** | `Ctrl/Cmd+Click` or Command Palette |
-| **Find All References** | `Shift+F12` |
-| **Rename Symbol** | `F2` |
-| **Go to Symbol in Workspace** | `Cmd+T` / `Ctrl+T` |
+- **New Indicator**: Command Palette, Explorer context menu, `⌘⌥I` (macOS) / `Ctrl+Alt+I` (Windows/Linux), or [deep link](vscode://chereshnyuk.chereshnyuk-com-pinescript/command/newIndicator)
+- **New Strategy**: Command Palette, Explorer context menu, `⌘⌥S` / `Ctrl+Alt+S`
+- **Format Document**: Command Palette (**Pine Script: Format Document**), editor title run action, or `pinescript.formatDocument`
+- **View Release Notes**: Command Palette (**Pine Script: View Release Notes**)
+- **Go to Definition**: `F12`
+- **Go to Type Definition**: `Ctrl/Cmd+Click` or Command Palette
+- **Find All References**: `Shift+F12`
+- **Rename Symbol**: `F2`
+- **Go to Symbol in Workspace**: `Cmd+T` / `Ctrl+T`
 
 ---
 
@@ -175,11 +169,9 @@ Pine Script DevKit is maintained independently. If it helps your Pine Script wor
 
 Pine Script DevKit can send **sanitized crash reports** to [Sentry](https://sentry.io) when you opt in. Crash reporting is **disabled by default**.
 
-| Setting | Purpose |
-|---|---|
-| `pinescript.telemetry.sentry.enabled` | Opt in to crash reporting |
-| `pinescript.telemetry.sentry.sampleRate` | Fraction of captured errors to send (0–1) |
-| `pinescript.telemetry.sentry.environment` | Optional environment override |
+- **`pinescript.telemetry.sentry.enabled`**: opt in to crash reporting
+- **`pinescript.telemetry.sentry.sampleRate`**: fraction of captured errors to send (0 to 1)
+- **`pinescript.telemetry.sentry.environment`**: optional environment override
 
 Changes to these settings apply **immediately**; you do not need to reload the window.
 
@@ -214,45 +206,35 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 
 ### Diagnostics
 
-| Setting | Purpose |
-|---------|---------|
-| `pinescript.diagnostics.enable` | Enable real-time Pine Script diagnostics |
+- **`pinescript.diagnostics.enable`**: enable real-time Pine Script diagnostics
 
 ### IntelliSense and navigation
 
-| Setting | Purpose |
-|---------|---------|
-| `pinescript.hover.showDocLinks` | Show TradingView reference links in hover, completion, and signature help |
-| `pinescript.completion.triggerOnDot` | Show namespace completions when typing a dot (for example `ta.`) |
-| `pinescript.references.enable` | Enable Find All References for user-defined symbols |
-| `pinescript.workspaceSymbols.enable` | Enable Go to Symbol in Workspace for user-defined Pine symbols |
+- **`pinescript.hover.showDocLinks`**: show TradingView reference links in hover, completion, and signature help
+- **`pinescript.completion.triggerOnDot`**: show namespace completions when typing a dot (for example `ta.`)
+- **`pinescript.references.enable`**: enable Find All References for user-defined symbols
+- **`pinescript.workspaceSymbols.enable`**: enable Go to Symbol in Workspace for user-defined Pine symbols
 
 ### Editor
 
-| Setting | Purpose |
-|---------|---------|
-| `pinescript.inlayHints.enable` | Master toggle for inlay hints |
-| `pinescript.inlayHints.showInferredTypes` | Inferred series/simple qualifier hints on variables |
-| `pinescript.inlayHints.showScriptOverlay` | Effective overlay flag on `indicator()` / `strategy()` calls |
-| `pinescript.inlayHints.showParameterNames` | Parameter name hints at positional built-in call sites |
-| `pinescript.inlineCompletions.enable` | Opt-in inline completions (off by default) |
-| `pinescript.codeLens.enable` | Usage count above user-defined functions |
-| `pinescript.color.enable` | Color picker for `color.rgb()` and `color.*` constants |
-| `pinescript.formatting.enable` | Document, selection, and on-type formatting |
+- **`pinescript.inlayHints.enable`**: master toggle for inlay hints
+- **`pinescript.inlayHints.showInferredTypes`**: inferred series/simple qualifier hints on variables
+- **`pinescript.inlayHints.showScriptOverlay`**: effective overlay flag on `indicator()` / `strategy()` calls
+- **`pinescript.inlayHints.showParameterNames`**: parameter name hints at positional built-in call sites
+- **`pinescript.inlineCompletions.enable`**: opt-in inline completions (off by default)
+- **`pinescript.codeLens.enable`**: usage count above user-defined functions
+- **`pinescript.color.enable`**: color picker for `color.rgb()` and `color.*` constants
+- **`pinescript.formatting.enable`**: document, selection, and on-type formatting
 
 ### Theme
 
-| Setting | Purpose |
-|---------|---------|
-| `pinescript.theme.applyOverrides` | Opt-in workspace token color overrides (requires trust) |
+- **`pinescript.theme.applyOverrides`**: opt-in workspace token color overrides (requires trust)
 
 ### Telemetry
 
-| Setting | Purpose |
-|---------|---------|
-| `pinescript.telemetry.sentry.enabled` | Opt-in Sentry crash reporting |
-| `pinescript.telemetry.sentry.sampleRate` | Error sample rate when Sentry is enabled |
-| `pinescript.telemetry.sentry.environment` | Optional Sentry environment override |
+- **`pinescript.telemetry.sentry.enabled`**: opt-in Sentry crash reporting
+- **`pinescript.telemetry.sentry.sampleRate`**: error sample rate when Sentry is enabled
+- **`pinescript.telemetry.sentry.environment`**: optional Sentry environment override
 
 ---
 

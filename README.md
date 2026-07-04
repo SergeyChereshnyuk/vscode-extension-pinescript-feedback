@@ -3,6 +3,7 @@
 Pine Script v6 language support for Visual Studio Code with syntax highlighting, IntelliSense, hover docs, snippets, formatter, diagnostics, and `@pinescript` AI chat for TradingView.
 
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
+
 ---
 
 ## Code Intelligence
@@ -14,6 +15,7 @@ Namespace-aware autocomplete covers all built-in functions, variables, constants
 Real-time diagnostics identify common Pine Script issues such as missing version declarations, incomplete indicator configuration, import resolution problems, and several common language pitfalls. Issues appear in the Problems panel with quick-fix code actions where applicable.
 
 Semantic highlighting distinguishes user-defined functions, variables, types, and parameters from built-in language symbols.
+
 ---
 
 ## Navigation
@@ -27,6 +29,7 @@ Move through Pine scripts and workspace symbols with definition, reference, and 
 - **Smart Folding**: function bodies, `type` blocks, and `// #region` markers
 - **Document Highlight**: all occurrences of the symbol under the cursor in real time
 - **Document links**: clickable links on built-in call sites and field access when TradingView reference links are enabled, the `//@version=6` header, and resolvable local import paths; arbitrary URLs in comments or strings are not linked
+
 ---
 
 ## Editing
@@ -43,6 +46,7 @@ Format, scaffold, and refine Pine scripts with snippets, templates, inlay hints,
 - **Built-in discovery**: type `ta.`, `math.`, `strategy.`, or any namespace prefix to browse 200+ built-in functions with hover docs and signature help
 - **Version diagnostics**: missing or non-v6 `//@version` declarations appear in the Problems panel; use the quick fix code action to add `//@version=6`
 - **Reference links**: **View in Pine Script Reference** links in hover, completion details, and signature help open the official TradingView v6 page for built-in symbols; toggle with `pinescript.hover.showDocLinks`
+
 ---
 
 ## Imports and Libraries
@@ -51,6 +55,7 @@ Format, scaffold, and refine Pine scripts with snippets, templates, inlay hints,
 - **Local imports**: `import` paths resolve via the workspace file system; Go to Definition and document links work on resolvable local targets
 - **Virtual workspaces**: edit Pine in remote and virtual workspaces such as [vscode.dev](https://vscode.dev) and GitHub Repositories with diagnostics, IntelliSense, formatting, and local import support where workspace trust allows
 - **Limitation**: workspace-wide reference search is not supported in virtual workspaces
+
 ---
 
 ## AI Integration
@@ -79,6 +84,7 @@ Bundled **chat instructions**, **prompt files** for review, diagnostic fixes, an
 AI-generated responses and code are provided as development assistance only. They may be incomplete, inaccurate, or unsuitable for your use case. Always review, test, and validate generated code in TradingView before relying on it.
 
 Pine Script DevKit and its AI features do not provide investment advice, trading advice, or personalized financial recommendations.
+
 ---
 
 ## Platforms
@@ -87,6 +93,7 @@ Pine Script DevKit and its AI features do not provide investment advice, trading
 - **VS Code for the web**: web extension bundle; language features and AI when Copilot and trust allow
 - **Virtual workspaces**: remote repos and vscode.dev; see [Imports and Libraries](#imports-and-libraries) for reference-search limits
 - **Restricted Mode**: Pine LSP features work; `@pinescript`, `#applyScaffold`, and workspace theme overrides require trust
+
 ---
 
 ## Getting Started
@@ -102,6 +109,7 @@ vscode://chereshnyuk.chereshnyuk-com-pinescript/walkthrough/pinescript.gettingSt
 vscode://chereshnyuk.chereshnyuk-com-pinescript/settings/inlayHints.enable
 vscode://chereshnyuk.chereshnyuk-com-pinescript/command/newIndicator
 ```
+
 ---
 
 ## Syntax Highlighting Colors
@@ -109,6 +117,7 @@ vscode://chereshnyuk.chereshnyuk-com-pinescript/command/newIndicator
 Pine Script DevKit automatically injects Pine Script syntax colors on top of your active VS Code theme. Colors adapt to light and dark mode automatically and only affect `.pine` files, leaving the rest of your editor untouched.
 
 A custom `.pine` file icon is included and adapts to both light and dark editor themes.
+
 ---
 
 ## Commands and Shortcuts
@@ -122,11 +131,13 @@ A custom `.pine` file icon is included and adapts to both light and dark editor 
 - **Find All References**: `Shift+F12`
 - **Rename Symbol**: `F2`
 - **Go to Symbol in Workspace**: `Cmd+T` on macOS or `Ctrl+T` on Windows and Linux
+
 ---
 
 ## Localization
 
 Extension UI strings are localized for **14 VS Code display languages**. Manifest strings live in `package.nls.*` and runtime strings in `l10n/bundle.l10n.*`. VS Code picks the bundle matching your display language automatically.
+
 ---
 
 ## Support the Project
@@ -173,6 +184,7 @@ Changes to these settings apply **immediately**; you do not need to reload the w
 - Performance traces, session replay, or profiling data
 
 Reports are sent to Sentry's **EU ingest** region when enabled. This is opt-in stability telemetry covering errors and release health, not usage analytics.
+
 ---
 
 ## Support and feedback
@@ -216,6 +228,7 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 - **`pinescript.telemetry.sentry.enabled`**: opt-in Sentry crash reporting
 - **`pinescript.telemetry.sentry.sampleRate`**: error sample rate when Sentry is enabled
 - **`pinescript.telemetry.sentry.environment`**: optional Sentry environment override
+
 ---
 
 ## Financial Disclaimer and Risk Notice

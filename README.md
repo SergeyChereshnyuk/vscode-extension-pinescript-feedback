@@ -41,6 +41,22 @@ AI-generated responses and code are provided as development assistance only. The
 
 Pine Script DevKit and its AI features do not provide investment advice, trading advice, or personalized financial recommendations.
 
+## Marketplace FEATURES Reference
+
+The VS Code Marketplace **FEATURES** tab lists technical contributions declared in the extension manifest. Use this map when reviewing the listing in Extension Details:
+
+- **Runtime Status**: activation timing and workspace capability flags such as virtual workspaces and Restricted Mode behavior.
+- **Activation Events**: when Pine Script DevKit loads: opening a workspace folder that contains `.pine` files, opening a `.pine` file, running Pine commands, starting walkthroughs, invoking `@pinescript`, or calling Agent Language Model Tools.
+- **Chat Instructions**: bundled Pine Script v6 guidelines Copilot applies when a `.pine` file is in context.
+- **Chat Participants**: the `@pinescript` Copilot Chat participant for explain, indicator, and strategy workflows.
+- **Chat Prompt Files**: reusable slash prompts for review, diagnostic fixes, and new indicators.
+- **Chat Skills**: the **pine-indicator** Agent skill for scaffold and debug workflows.
+- **Commands**: **Pine Script: New Indicator**, **New Strategy**, **Format Document**, and **View Release Notes**.
+- **Language Model Tools**: `#lookupBuiltin`, `#getDiagnostics`, `#scaffold`, `#applyScaffold`, and `#suggestFix` for Agent mode.
+- **Programming Languages**: Pine Script grammar, `.pine` file association, snippets, and semantic token types.
+- **Settings**: every `pinescript.*` configuration key documented in [Extension Settings](#extension-settings).
+- **Settings Default Overrides**: Pine-scoped syntax and semantic colors applied only to `.pine` files; stronger workspace theme writes require `pinescript.theme.applyOverrides`.
+
 ## Navigation
 
 Move through Pine scripts and workspace symbols with definition, reference, and outline tooling.
@@ -84,7 +100,7 @@ Format, scaffold, and refine Pine scripts with snippets, templates, inlay hints,
 
 ## Getting Started
 
-1. [Install](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript) the extension and open a `.pine` file.
+1. [Install](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript) the extension and open a folder that contains Pine Script files or open a `.pine` file directly.
 2. Run **Help: Open Walkthrough…** and choose **Get Started with Pine Script** or **What's New in Pine Script DevKit 2.0**.
 3. After updates, use **Pine Script: View Release Notes** from the Command Palette for bundled release notes.
 
@@ -98,7 +114,7 @@ A custom `.pine` file icon is included and adapts to both light and dark editor 
 
 - **New Indicator**: Command Palette, Explorer context menu, `⌘⌥I` on macOS, `Ctrl+Alt+I` on Windows and Linux, or [deep link](vscode://chereshnyuk.chereshnyuk-com-pinescript/command/newIndicator)
 - **New Strategy**: Command Palette, Explorer context menu, `⌘⌥S` on macOS, `Ctrl+Alt+S` on Windows and Linux
-- **Format Document**: Command Palette with **Pine Script: Format Document**, editor title run action, or `pinescript.formatDocument`
+- **Format Document**: Command Palette with **Pine Script: Format Document**, editor title run action, `Shift+Alt+F` when a `.pine` file is focused, or `pinescript.formatDocument`
 - **View Release Notes**: Command Palette with **Pine Script: View Release Notes**
 - **Go to Definition**: `F12`
 - **Go to Type Definition**: `Ctrl/Cmd+Click` or Command Palette

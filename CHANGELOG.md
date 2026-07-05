@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.0.5] 2026-07-04
+
+### Fixed
+- Restored a missing diagnostic for conditional `request.security` call sites so history-dependent warnings match TradingView behavior more closely.
+- Improved the visibility of Pine Script parentheses in the light theme so they remain readable.
+- Fixed the “What’s New” notification so release notes and additional actions no longer overflow or clip.
+- Ensured localization files are included correctly in release packages.
+
 ## [Unreleased]
 
 ### Added
@@ -10,6 +18,21 @@
 ### Improved
 - Declared explicit lazy activation events for the Getting Started walkthrough and core onboarding commands so extension activation and what's-new onboarding run when users open the walkthrough without opening a `.pine` file first.
 - Expanded `README.md` for Pine Script DevKit 2.0: full settings table, Agent tools, platforms, onboarding deep links, and positive docs-accuracy guards. Coordinate privacy wording with usage-telemetry work in change `add-usage-telemetry-appinsights` before publish if both land together.
+
+## [2.0.7] 2026-07-05
+
+### Improved
+- Added `workspaceContains:**/*.pine` activation so Pine Script DevKit warms language services when a workspace folder contains Pine Script files, even before a `.pine` editor is opened.
+- Deferred what's-new and automatic walkthrough onboarding until Pine editor context appears so workspace-only activation does not surface intrusive UI.
+
+## [2.0.6] 2026-07-05
+
+### Improved
+- Hardened Marketplace **FEATURES** metadata: full command activation coverage including **View Release Notes**, localized Language Model Tool `modelDescription` strings, `Shift+Alt+F` format keybinding for Pine editors, and theme defaults synced from canonical theme JSON via `npm run sync:manifest-theme-defaults`.
+- Added README **Marketplace FEATURES Reference** mapping each FEATURES sidebar category to user-facing capabilities.
+
+### Fixed
+- Fixed lazy activation gap for `pinescript.viewReleaseNotes` when what's-new or deep-link flows run before a `.pine` file is opened.
 
 ## [2.0.2] 2026-07-03
 
@@ -95,6 +118,7 @@
 
 ### Fixed
 - Restored CW10003 on user-defined routines (for example `f_donchian`) called inside conditional HTF refresh guards that wrap `request.security` expressions, matching TradingView compiler behavior on patterns such as `supertrend_dqn.pine`. Built-in `ta.*` nodes inside those routine bodies remain deduplicated; inlined `ta.*` inside security expressions remain CW10002-exempt.
+- Fixed CW10003 false positives when history-dependent calls appear inside `switch` branches keyed by a routine parameter without a `series` qualifier (for example uncalled `ma1` in `MOVINGaverage osc map og.pine` and library MA dispatch helpers). `isConditionBarVariant` no longer treats inconclusive parameter inference as bar-coupling when the selector is a routine parameter and `inferSeriesKind` is not `series`, aligning with Pine `simple`/configuration static dispatch documented in TradingView CW10003 and type-system guides.
 
 ### Improved
 - Updated README and walkthrough content to match the current product surface (namespace IntelliSense, version diagnostics, and doc-reference links) and removed stale references to the deleted Pine Script Explorer, custom version status bar, and comment URL click-through.

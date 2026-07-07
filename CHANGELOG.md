@@ -4,6 +4,7 @@
 
 ### Fixed
 - Fewer false CW10003 warnings on built-in moving-average smoothing helpers that dispatch `ta.*` through configuration-time `input.string` or enum selectors.
+- Fixed false CW10003 on MA-selector `switch` dispatch when the selector reaches an inner routine through wrapper user-defined functions (for example `f_pass(maType)` → `f_ma(_typ)`), matching TradingView bar-every-execution semantics per [CW10003](https://www.tradingview.com/pine-script-docs/errors/CW10003/) and the [inconsistent behavior demo](https://www.tradingview.com/pine-script-docs/language/user-defined-functions) (series-varying selector arguments still warn).
 
 ## [2.2.3] 2026-07-06
 

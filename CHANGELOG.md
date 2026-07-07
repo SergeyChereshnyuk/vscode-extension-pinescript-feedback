@@ -1,5 +1,45 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+- Fewer false CW10003 warnings on built-in moving-average smoothing helpers that dispatch `ta.*` through configuration-time `input.string` or enum selectors.
+
+## [2.2.3] 2026-07-06
+
+### Fixed
+- Reduced false positive diagnostics for certain `ta.*` composition patterns that use historical series access, so feature-toggle logic is less likely to be flagged incorrectly.
+- Improved switch-based `ta.*` history checks to better match TradingView behavior, reducing incorrect diagnostics in those cases.
+- Fixed release publishing so the extension no longer runs the same prepublish build step twice during marketplace release workflows.
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [2.2.0] 2026-07-05
+
+### Improved
+- Release publishing now cleans up failed release tags automatically, helping prevent blocked re-dispatches after publish failures.
+- Release verification now catches production bundle allowlist drift earlier, reducing the chance of shipping unexpected artifacts.
+- Test runs now clean up temporary artifacts more reliably, improving local and CI test stability.
+
+## [2.1.0] 2026-07-05
+
+### Fixed
+- Reduced false positives in history-sensitive diagnostics for nested wrapper calls.
+- Restored a missing diagnostic for compound conditions that combine input and series checks.
+- Fixed false positives in loop-end shadowing detection for subtractive `for` ranges.
+- Corrected detection of typed tuple destructuring so the related diagnostic appears again.
+- Improved theme readability for generic type angle brackets in light themes.
+- Removed a noisy editor title-bar formatting entry while keeping formatting available from commands.
+- Trimmed redundant activation events so the extension relies on VS Code’s implicit activation behavior.
+
+### Improved
+- Improved diagnostic performance on simple lines by skipping unnecessary scanning work.
+- Strengthened the text diagnostics performance guard to better catch scaling regressions.
+- Optimized internal diagnostics context reuse for better responsiveness.
+- Reduced extension package size by excluding unnecessary bundled content from the VSIX.
+- Tightened coverage and release checks to keep quality gates stable.
+
 ## [2.0.5] 2026-07-04
 
 ### Fixed

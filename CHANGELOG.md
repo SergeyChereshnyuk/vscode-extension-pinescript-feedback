@@ -1,5 +1,30 @@
 # Changelog
 
+## [2.2.9] 2026-07-08
+
+### Improved
+- Reduced false positives in lazy-evaluation diagnostics for ternary branches inside pure wrapper calls, including cases involving `nz()` and `ta.*` expressions.
+- Improved reachability diagnostics so short-circuit conditions are handled more consistently in `and`/`or`-only scripts.
+- Refined history-based diagnostics to better match TradingView behavior for structural reachability and ternary evaluation patterns.
+- Updated diagnostic baselines to reflect the latest false-positive reductions and reachability refinements.
+
+## [2.2.7] 2026-07-08
+
+### Fixed
+- Reduced false positive CW10003 diagnostics for drawing routines, including cases where drawing handles are rebound without depending on prior history.
+- Improved CW10003 handling for nested routine call tracing so switch-arm reachability is analyzed more accurately.
+
+## [2.2.6] 2026-07-07
+
+### Fixed
+- Reduced false CW10003 diagnostics for configuration-based switch dispatch, including nested helper chains and overloaded routines.
+- Improved parity with TradingView by keeping valid MA-selector and session-reset switch patterns from being flagged.
+- Allowed comments between switch arms without triggering CW10003 in supported cases.
+
+### Improved
+- Enhanced diagnostics performance and responsiveness.
+- Improved release stability by rebalancing diagnostics performance thresholds to reduce CI flakiness.
+
 ## [Unreleased]
 
 ### Fixed

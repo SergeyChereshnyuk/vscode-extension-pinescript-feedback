@@ -145,27 +145,26 @@ Pine Script DevKit is maintained independently. If it helps your Pine Script wor
 
 ## Crash reporting
 
-Pine Script DevKit can send **sanitized crash reports** to [Sentry](https://sentry.io) when you opt in. Crash reporting is **disabled by default**.
+When **VS Code telemetry** is enabled and `telemetry.telemetryLevel` is not `off`, Pine Script DevKit can send **sanitized crash reports** to [Sentry](https://sentry.io) EU ingest. Data goes to the extension author's Sentry project, not to Microsoft.
 
-- **`pinescript.telemetry.sentry.enabled`**: opt in to crash reporting
+- **`telemetry.telemetryLevel`**: VS Code setting that controls whether crash and error telemetry may be sent
 - **`pinescript.telemetry.sentry.sampleRate`**: fraction of captured errors to send from 0 to 1
-- **`pinescript.telemetry.sentry.environment`**: optional environment override
+- **`pinescript.telemetry.sentry.environment`**: optional Sentry environment override
 
-Changes to these settings apply **immediately**; you do not need to reload the window.
+Changes to the Pine Script Sentry settings apply **immediately**; you do not need to reload the window.
 
 **What may be sent**
 - Extension error type and message with sensitive details removed
 - Extension version, VS Code version, platform, and Node.js version
 - Stack traces from the extension bundle with `app:///` paths
-- Anonymous release-health session data for crash-free rate and error-rate per release
+- Anonymous release-health session data for crash-free rate and error-rate per release, not install counts
 
 **What is not sent**
+- Install or first-run events
 - Pine script source code or open document text
 - Auth tokens, cookies, or HTTP bodies
 - Raw user file paths or `file://` URIs
-- Performance traces, session replay, or profiling data
-
-Reports are sent to Sentry's **EU ingest** region when enabled. This is opt-in stability telemetry covering errors and release health, not usage analytics.
+- Performance traces, session replay, profiling, or usage analytics
 
 ## Support and feedback
 
@@ -189,8 +188,7 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 - **`pinescript.color.enable`**: color picker for `color.rgb()` and `color.*` constants
 - **`pinescript.formatting.enable`**: document, selection, and on-type formatting
 - **`pinescript.theme.applyOverrides`**: opt-in workspace token color overrides; requires Workspace Trust
-- **`pinescript.telemetry.sentry.enabled`**: opt-in Sentry crash reporting
-- **`pinescript.telemetry.sentry.sampleRate`**: error sample rate when Sentry is enabled
+- **`pinescript.telemetry.sentry.sampleRate`**: error sample rate when VS Code telemetry allows Sentry reporting
 - **`pinescript.telemetry.sentry.environment`**: optional Sentry environment override
 
 ## Financial Disclaimer and Risk Notice

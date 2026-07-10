@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.2.11] 2026-07-10
+
+### Fixed
+- Refactored CW10004 lazy ternary diagnostics to a unified `classifyTernaryBranchRelation` model, replacing the per-corpus exemption zoo.
+- Fixed false positive CW10004 on config-gated passthrough smoothing (`input.bool ? f_ewma(x, α) : x`) in supertrend_dqn-style scripts.
+- Reduced false positive CW10004 diagnostics for configuration-selector ternary patterns.
+
+## [2.2.10] 2026-07-10
+
+### Fixed
+- Reduced false positive CW10004 diagnostics for nested input-gated moving-average selector patterns.
+- Updated GitHub links and marketplace-related URLs to the renamed account.
+
 ## [2.2.9] 2026-07-08
 
 ### Improved

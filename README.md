@@ -4,6 +4,12 @@ Pine Script v6 language support for Visual Studio Code with syntax highlighting,
 
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
 
+## Security
+
+<!-- virustotal-trust:start -->
+Published VSIX packages are scanned with [VirusTotal](https://www.virustotal.com/) before each Marketplace release. The badge and report link below are updated automatically by release CI or by running `node scripts/bootstrap-virustotal-release.mjs` for the current version.
+<!-- virustotal-trust:end -->
+
 ## Code Intelligence
 
 Pine Script DevKit includes complete Pine Script v6 language metadata sourced from the TradingView reference.

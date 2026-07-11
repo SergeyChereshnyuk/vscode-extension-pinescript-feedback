@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.3.0] 2026-07-11
+
+### Fixed
+- Fixed missing companion diagnostics so related Pine Script warnings are reported together.
+- Reduced duplicate diagnostics in the Problems panel.
+- Fixed false positive warnings for valid Ribbon/bar-variant conditions.
+
+### Improved
+- Diagnostics now appear sooner when opening Pine Script files, especially on larger files.
+- Improved built-in Pine Script reference descriptions and documentation links.
+
 ## [Unreleased]
 
 ### Improved

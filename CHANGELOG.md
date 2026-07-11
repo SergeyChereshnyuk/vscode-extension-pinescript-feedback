@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased]
+
+### Improved
+- Updated the VS Code Marketplace extension icon.
+
+## [2.2.12] 2026-07-11
+
+### Improved
+- Reduced false positives in history-related diagnostics to better match TradingView behavior.
+- Improved diagnostic consistency for conditional and ternary history checks, including better handling of nested and chart-scope cases.
+- Enhanced stability and reliability of diagnostic reporting for imported calls, security expressions, and variable state lifecycle guards.
+
 ## [2.2.11] 2026-07-10
 
 ### Fixed

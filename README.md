@@ -6,7 +6,7 @@ Pine Script DevKit brings Pine Script development tools to VS Code for building 
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/f8fa1d6f446027da3c8d9b1e6beb611436a572df95f1cea176e4dec5acd27255)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/1e57499ec65578a63b2f4852a5bbfe8afde77b974392c65a7d1ad222ae39d8d5)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
 <!-- readme-badges:end -->
@@ -200,9 +200,9 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 ## Security
 
 <!-- virustotal-trust:start -->
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.3.3.
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.3.4.
 
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/f8fa1d6f446027da3c8d9b1e6beb611436a572df95f1cea176e4dec5acd27255).
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/1e57499ec65578a63b2f4852a5bbfe8afde77b974392c65a7d1ad222ae39d8d5).
 <!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice

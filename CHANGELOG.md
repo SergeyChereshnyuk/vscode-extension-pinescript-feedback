@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.4] 2026-07-12
+
+### Fixed
+- Fixed an activation error that affected chat participant disambiguation on desktop and web.
+- Fixed incremental diagnostics so structural edits and coalesced changes update affected warnings more reliably.
+
+### Improved
+- Improved extension responsiveness when restoring workspaces with many open Pine documents.
+- Improved diagnostics performance during editing by reducing repeated work on incremental updates.
+- Improved cancellation behavior for long-running editor requests such as references, rename, completions, inlay hints, and code lenses.
+- Improved workspace symbol updates so in-editor changes are reflected before saving.
+
 ## [2.3.3] 2026-07-12
 
 ### Added

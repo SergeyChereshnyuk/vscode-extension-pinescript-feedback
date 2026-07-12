@@ -1,14 +1,6 @@
-# Pine Script DevKit for VS Code
-
 Pine Script v6 language support for Visual Studio Code with syntax highlighting, IntelliSense, hover docs, snippets, formatter, diagnostics, and `@pinescript` AI chat for TradingView.
 
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
-
-## Security
-
-<!-- virustotal-trust:start -->
-Published VSIX packages are scanned with [VirusTotal](https://www.virustotal.com/) before each Marketplace release. The badge and report link below are updated automatically by release CI or by running `node scripts/bootstrap-virustotal-release.mjs` for the current version.
-<!-- virustotal-trust:end -->
 
 ## Code Intelligence
 
@@ -96,13 +88,6 @@ Format, scaffold, and refine Pine scripts with snippets, templates, inlay hints,
 - **Local imports**: `import` paths resolve via the workspace file system; Go to Definition and document links work on resolvable local targets
 - **Virtual workspaces**: edit Pine in remote and virtual workspaces such as [vscode.dev](https://vscode.dev) and GitHub Repositories with diagnostics, IntelliSense, formatting, and local import support where workspace trust allows
 - **Limitation**: workspace-wide reference search is not supported in virtual workspaces
-
-## Platforms
-
-- **VS Code desktop**: full language features and Copilot integration
-- **VS Code for the web**: web extension bundle; language features and AI when Copilot and trust allow
-- **Virtual workspaces**: remote repos and vscode.dev; see [Imports and Libraries](#imports-and-libraries) for reference-search limits
-- **Restricted Mode**: Pine LSP features work; `@pinescript`, `#applyScaffold`, and workspace theme overrides require trust
 
 ## Getting Started
 
@@ -196,6 +181,22 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 - **`pinescript.theme.applyOverrides`**: opt-in workspace token color overrides; requires Workspace Trust
 - **`pinescript.telemetry.sentry.sampleRate`**: error sample rate when VS Code telemetry allows Sentry reporting
 - **`pinescript.telemetry.sentry.environment`**: optional Sentry environment override
+
+## Platforms
+
+- **VS Code desktop**: full language features and Copilot integration
+- **VS Code for the web**: web extension bundle; language features and AI when Copilot and trust allow
+- **Virtual workspaces**: remote repos and vscode.dev; see [Imports and Libraries](#imports-and-libraries) for reference-search limits
+
+## Security
+
+<!-- virustotal-trust:start -->
+Each published pre-release VSIX is scanned with VirusTotal before Marketplace release for version 2.3.1.
+
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/13e641eef82855e17e8fbd257dd08d240b442a9a707a9aa8cc1eafed65045252)
+
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/13e641eef82855e17e8fbd257dd08d240b442a9a707a9aa8cc1eafed65045252).
+<!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice
 

@@ -2,6 +2,14 @@ Pine Script v6 language support for Visual Studio Code with syntax highlighting,
 
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
 
+<!-- readme-badges:start -->
+[![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/13e641eef82855e17e8fbd257dd08d240b442a9a707a9aa8cc1eafed65045252)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
+<!-- readme-badges:end -->
+
 ## Code Intelligence
 
 Pine Script DevKit includes complete Pine Script v6 language metadata sourced from the TradingView reference.
@@ -192,8 +200,6 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 
 <!-- virustotal-trust:start -->
 Each published pre-release VSIX is scanned with VirusTotal before Marketplace release for version 2.3.1.
-
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/13e641eef82855e17e8fbd257dd08d240b442a9a707a9aa8cc1eafed65045252)
 
 Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/13e641eef82855e17e8fbd257dd08d240b442a9a707a9aa8cc1eafed65045252).
 <!-- virustotal-trust:end -->

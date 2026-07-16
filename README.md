@@ -6,7 +6,7 @@ Pine Script DevKit brings Pine Script development tools to VS Code for building 
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/952301d3d4e2f4d9b86685a4dc879fb175ae6177170d6623893e119814fa054f)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/bdbc17bcc3b3d007598144a7ec27e5fff1bb7d6468ab075f3174685d73ad25e5)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
 <!-- readme-badges:end -->
@@ -145,7 +145,7 @@ Pine Script DevKit is maintained independently. If it helps your Pine Script wor
 
 ## Crash reporting
 
-When **VS Code telemetry** is enabled and `telemetry.telemetryLevel` is not `off`, Pine Script DevKit can send **sanitized crash reports** to [Sentry](https://sentry.io) EU ingest. Data goes to the extension author's Sentry project, not to Microsoft.
+When **VS Code telemetry** is enabled and `telemetry.telemetryLevel` is not `off`, Pine Script DevKit can send **sanitized crash reports** to [Sentry](https://sentry.io) EU ingest. Data goes to the extension author's Sentry project, not to Microsoft. Crash reporting runs on the desktop extension host only; the web extension host on vscode.dev and github.dev sends no telemetry at all.
 
 - **`telemetry.telemetryLevel`**: VS Code setting that controls whether crash and error telemetry may be sent
 - **`pinescript.telemetry.sentry.sampleRate`**: fraction of captured errors to send from 0 to 1
@@ -157,7 +157,7 @@ Changes to the Pine Script Sentry settings apply **immediately**; you do not nee
 - Extension error type and message with sensitive details removed
 - Extension version, VS Code version, platform, and Node.js version
 - Stack traces from the extension bundle with `app:///` paths
-- Anonymous release-health session data for crash-free rate and error-rate per release, not install counts
+- Anonymous release-health session data for crash-free rate and error-rate per release, not install counts. A session-start marker is reported when the extension activates; the session-end marker at shutdown is best-effort
 
 **What is not sent**
 - Install or first-run events
@@ -200,9 +200,9 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 ## Security
 
 <!-- virustotal-trust:start -->
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.5.0.
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.5.2.
 
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/952301d3d4e2f4d9b86685a4dc879fb175ae6177170d6623893e119814fa054f).
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/bdbc17bcc3b3d007598144a7ec27e5fff1bb7d6468ab075f3174685d73ad25e5).
 <!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice

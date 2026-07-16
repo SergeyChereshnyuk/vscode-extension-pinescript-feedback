@@ -1,5 +1,34 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+- Fixed crash reporting so anonymous release-health data is delivered during normal use instead of being lost when the editor closes.
+
+### Removed
+- Removed telemetry from the web extension (vscode.dev / github.dev); it now sends no data at all.
+- Removed the uninstall-time telemetry hook; uninstalling the extension triggers no network activity.
+
+### Improved
+- Reduced the web extension bundle size by about 75%.
+
+## [2.5.2] 2026-07-16
+
+### Improved
+- Enhanced internal stability and performance optimizations.
+
+## [2.5.1] 2026-07-16
+
+### Added
+- Added localized quick-fix guidance for undeclared identifier diagnostics.
+
+### Fixed
+- Fixed undeclared identifier diagnostics to better match TradingView behavior across global scopes, blocks, functions, and methods.
+- Fixed false CW10003/CW10004 warnings for configuration comparisons and related guard conditions.
+
+### Improved
+- Optimized diagnostics performance and responsiveness for larger scripts.
+
 ## [2.5.0] 2026-07-15
 
 ### Fixed
@@ -13,16 +42,6 @@
 - Improved responsiveness of signature help and completions for incomplete function calls in large files.
 - Improved editor responsiveness by cancelling superseded background analysis while documents are changing.
 - Improved memory cleanup during repeated editing and symbol analysis.
-
-## [Unreleased]
-
-### Added
-- Added CE10272 undeclared identifier detection for the global scope and top level `if`, `for`, `while` and `switch` blocks, matching TradingView compiler behavior.
-- Added a fix hint for CE10272 that explains declaration order and scope visibility, localized into all supported languages.
-
-### Improved
-- Undeclared identifier analysis now runs on a single AST scope model and also covers method bodies.
-- Undeclared identifier messages now include the TradingView error code CE10272.
 
 ## [2.4.2] 2026-07-14
 

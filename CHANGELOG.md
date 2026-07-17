@@ -3,14 +3,20 @@
 ## [Unreleased]
 
 ### Fixed
-- Fixed crash reporting so anonymous release-health data is delivered during normal use instead of being lost when the editor closes.
+- Removed bogus built-in suggestions leaked from documentation parsing (section headings like "See Also", placeholder entries like `barmerge.*`) and deduplicated repeated entries, so completion lists show only real Pine v6 symbols.
+- Fixed switch expressions losing case arms after a `[tuple] = call(), value` arm, so later arms parse and get diagnostics again.
+- Fixed missing CW10003 warnings in `switch` dispatchers whose selector parameter has a declared type (for example `string mode` or an enum), matching TradingView, which treats such parameters as series regardless of call sites. Scripts with typed moving-average selectors may see new warnings on their switch arms; parameters without a declared type and `simple`-qualified parameters stay silent.
 
-### Removed
-- Removed telemetry from the web extension (vscode.dev / github.dev); it now sends no data at all.
-- Removed the uninstall-time telemetry hook; uninstalling the extension triggers no network activity.
+## [2.5.3] 2026-07-16
+
+### Fixed
+- Fixed incorrect configuration-vs-series warnings when conditions compare against global constants.
+- Fixed qualifier diagnostics for `var` and `varip` values so reassigned persistent values are handled correctly.
+- Fixed false argument-type warnings for supported collection arguments.
 
 ### Improved
-- Reduced the web extension bundle size by about 75%.
+- Improved diagnostic accuracy for Pine v6 built-ins and qualifier handling.
+- Improved telemetry reliability for desktop extension sessions and disabled unsupported telemetry behavior in web environments.
 
 ## [2.5.2] 2026-07-16
 

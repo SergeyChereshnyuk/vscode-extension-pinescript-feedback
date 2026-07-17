@@ -14,6 +14,7 @@
 - Corrected builtin metadata: `time` and `time_close` are `series int` (were mis-generated as `series float`).
 - Removed bogus built-in suggestions leaked from documentation parsing (section headings like "See Also", placeholder entries like `barmerge.*`) and deduplicated repeated entries, so completion lists show only real Pine v6 symbols.
 - Fixed switch expressions losing case arms after a `[tuple] = call(), value` arm, so later arms parse and get diagnostics again.
+- Fixed missing history-consistency warnings for function parameters declared as plain `bool` (no qualifier): TradingView treats them as series like every other declared type, so ternary and `if` guards over such parameters now warn; `simple bool` parameters stay silent.
 - Fixed missing CW10003 warnings in `switch` dispatchers whose selector parameter has a declared type (for example `string mode` or an enum), matching TradingView, which treats such parameters as series regardless of call sites. Scripts with typed moving-average selectors may see new warnings on their switch arms; parameters without a declared type and `simple`-qualified parameters stay silent.
 
 ## [2.5.3] 2026-07-16

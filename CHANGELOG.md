@@ -2,7 +2,16 @@
 
 ## [Unreleased]
 
+### Added
+- New diagnostics for full TradingView parity, each verified against TradingView's server-side compiler: shadowing of built-in variables (`float hlc3 = …`), type errors for `na` passed to non-nullable `bool` fields in user-defined type constructors, and incompatible `if` branch return types (e.g. a drawing object vs. a procedure call) at function tails.
+- History-consistency warnings now cover conditional scopes inside function bodies: enum-typed switch selectors, exported library routines (no call-site assumptions), loop bodies with multiple statements, and `not na(param)` guards whose guarded call consumes the parameter.
+- A full-corpus TradingView parity baseline: recorded server-compile expectations for all 720 `test-data/v6` scripts are now a blocking CI guard — any divergence from TradingView (outside declared exclusions such as remote-library imports) fails the build.
+- A unified Pine type model (`PineType` + AST expression resolver) as the single source of type knowledge for type-aware diagnostics.
+
 ### Fixed
+- Removed false CW10004 ternary warnings that TradingView does not emit: guards derived from parameterized user-defined function calls, symbol self-match `str.contains` guards, and the request.security callee override that warned at the wrong location.
+- Shadowing warnings (CW10013) now detect priors past invisible sibling scopes and in intermediate local parent scopes (indent heuristic replaced with structural AST checks); the `day_type_str` corpus hardcode was retired.
+- Corrected builtin metadata: `time` and `time_close` are `series int` (were mis-generated as `series float`).
 - Removed bogus built-in suggestions leaked from documentation parsing (section headings like "See Also", placeholder entries like `barmerge.*`) and deduplicated repeated entries, so completion lists show only real Pine v6 symbols.
 - Fixed switch expressions losing case arms after a `[tuple] = call(), value` arm, so later arms parse and get diagnostics again.
 - Fixed missing CW10003 warnings in `switch` dispatchers whose selector parameter has a declared type (for example `string mode` or an enum), matching TradingView, which treats such parameters as series regardless of call sites. Scripts with typed moving-average selectors may see new warnings on their switch arms; parameters without a declared type and `simple`-qualified parameters stay silent.

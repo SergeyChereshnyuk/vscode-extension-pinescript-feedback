@@ -3,10 +3,11 @@ Pine Script DevKit brings complete Pine Script v6 language intelligence to VS Co
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
 
 <!-- readme-badges:start -->
+
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/273428b5e92f27a32a938ea73ca05bb6d6892ac263ce1fa5c3dacaa0f45a62b4)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/19d14e011f065eea37cd14bd804c2035e250a48851c4ba2ab4bcc8d20da7881e)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
 [![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](#ai-integration)
@@ -164,6 +165,7 @@ When **VS Code telemetry** is enabled and `telemetry.telemetryLevel` is not `off
 Changes to the Pine Script Sentry settings apply **immediately**; you do not need to reload the window.
 
 **What may be sent**
+
 - Extension error type and message with sensitive details removed
 - Extension version, VS Code version, platform, and Node.js version
 - Stack traces from the extension bundle with `app:///` paths
@@ -171,6 +173,7 @@ Changes to the Pine Script Sentry settings apply **immediately**; you do not nee
 - The anonymized VS Code machine identifier `vscode.env.machineId`, a random GUID not derived from personal data, used as the distinct id for sessions and error reports so crash-free and affected-user rates can be computed. No email, username, or IP address is attached
 
 **What is not sent**
+
 - Install or first-run events
 - Pine script source code or open document text
 - Auth tokens, cookies, or HTTP bodies
@@ -185,6 +188,7 @@ Changes to the Pine Script Sentry settings apply **immediately**; you do not nee
 ## Extension Settings
 
 All settings are available in the VS Code Settings editor under **Pine Script**.
+
 - **`pinescript.diagnostics.enable`**: enable real-time Pine Script diagnostics
 - **`pinescript.hover.showDocLinks`**: show TradingView reference links in hover, completion, and signature help
 - **`pinescript.completion.triggerOnDot`**: show namespace completions when typing a dot such as `ta.`
@@ -213,9 +217,10 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 ## Security
 
 <!-- virustotal-trust:start -->
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.0.
 
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/273428b5e92f27a32a938ea73ca05bb6d6892ac263ce1fa5c3dacaa0f45a62b4).
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.1.
+
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/19d14e011f065eea37cd14bd804c2035e250a48851c4ba2ab4bcc8d20da7881e).
 <!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice
@@ -236,6 +241,7 @@ This extension is provided under the MIT License. The warranty disclaimer and li
 
 <!-- readme-badges:prerelease:start -->
 <!-- virustotal-release-version:2.5.5 -->
+
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)

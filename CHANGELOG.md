@@ -3,6 +3,8 @@
 ## [Unreleased]
 
 ### Improved
+- Tuple destructuring type errors now point at the same position the TradingView compiler reports.
+- Syntax error checks for statements on one line are now verified against the live TradingView compiler.
 - Updated the Tree-sitter parsing engine to 0.26.11, picking up upstream query-engine correctness fixes.
 - Leaner diagnostics engine: legacy text-based fallback analysis was removed now that all semantic checks run on the syntax tree, reducing per-keystroke work.
 - Routine header checks now run on the syntax tree for more precise spans and fewer heuristics.

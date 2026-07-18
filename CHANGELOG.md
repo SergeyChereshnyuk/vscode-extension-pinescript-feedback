@@ -7,6 +7,7 @@
 - Leaner diagnostics engine: legacy text-based fallback analysis was removed now that all semantic checks run on the syntax tree, reducing per-keystroke work.
 - Routine header checks now run on the syntax tree for more precise spans and fewer heuristics.
 - Wider detection of untyped exported function parameters in multiline headers.
+- Import resolution, version detection, and statement analysis now read the syntax tree directly, reducing repeated text scanning on every keystroke.
 
 ## [2.6.0] 2026-07-18
 

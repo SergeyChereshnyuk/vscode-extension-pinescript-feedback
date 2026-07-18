@@ -168,6 +168,7 @@ Changes to the Pine Script Sentry settings apply **immediately**; you do not nee
 - Extension version, VS Code version, platform, and Node.js version
 - Stack traces from the extension bundle with `app:///` paths
 - Anonymous release-health session data for crash-free rate and error-rate per release, not install counts. A session-start marker is reported when the extension activates; the session-end marker at shutdown is best-effort
+- The anonymized VS Code machine identifier `vscode.env.machineId`, a random GUID not derived from personal data, used as the distinct id for sessions and error reports so crash-free and affected-user rates can be computed. No email, username, or IP address is attached
 
 **What is not sent**
 - Install or first-run events

@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Improved
+
+- The TradingView parity guard now covers the entire diagnostics test corpus (all 842 scripts, including TradingView's built-in script set) with zero unexplained divergences; the last parked parity gap (switch arms after a comma-tail assignment) is verified closed after the grammar WASM refresh.
+
 ## [2.6.1] 2026-07-18
 
 ### Improved

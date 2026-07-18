@@ -6,10 +6,10 @@ Pine Script DevKit brings Pine Script development tools to VS Code for building 
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/7b766c0457dfb31ad19b911a7fc6c89819a300560d70c69fb8abfcba5770b9de)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/273428b5e92f27a32a938ea73ca05bb6d6892ac263ce1fa5c3dacaa0f45a62b4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
-[![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](https://modelcontextprotocol.io)
+[![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](#ai-integration)
 <!-- readme-badges:end -->
 
 ## Code Intelligence
@@ -213,9 +213,9 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 ## Security
 
 <!-- virustotal-trust:start -->
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.5.4.
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.0.
 
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/7b766c0457dfb31ad19b911a7fc6c89819a300560d70c69fb8abfcba5770b9de).
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/273428b5e92f27a32a938ea73ca05bb6d6892ac263ce1fa5c3dacaa0f45a62b4).
 <!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice

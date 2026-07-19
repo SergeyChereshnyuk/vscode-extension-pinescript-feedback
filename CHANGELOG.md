@@ -1,17 +1,20 @@
 # Changelog
 
-## [Unreleased]
+## [2.6.4] 2026-07-19
+
+### Added
+
+- Expanded the bundled remote library cache so more imported Tier 2 libraries resolve offline without a network connection.
 
 ### Fixed
 
-- Imports of third party libraries whose author renamed their TradingView account now resolve again with full IntelliSense.
-- Imports of libraries whose names differ only by letter case no longer receive symbols from the wrong sibling library. Wrong case imports stay unresolved to match the case sensitive TradingView compiler.
-- Bundled metadata for cybermediaboy/TAUtilityLib now reflects the real library across all published versions instead of a single wrong version.
-- Library data cached on disk before this fix refreshes itself once in the background so stale entries heal automatically.
+- Corrected resolution of remote libraries that share case-variant names so imports now match the correct published library and version.
+- Resolved false not-found results for libraries whose authors were renamed so those imports resolve again.
 
 ### Improved
 
-- The bundled third party library catalog now covers more popular community libraries and ships compressed, reducing the extension package size.
+- Refreshed cached remote libraries so previously unresolved imports no longer report resolution hints.
+- Optimized diagnostics performance for files that use imported libraries for faster and more responsive analysis.
 
 ## [2.6.3] 2026-07-19
 

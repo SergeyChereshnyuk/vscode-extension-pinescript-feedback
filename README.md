@@ -7,7 +7,7 @@ Pine Script DevKit brings Pine Script development tools to VS Code for building 
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/6adfa06425351bed5b892bf83c0b1211597f7f716ce6b8c7cefeb8b3254b3636)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/fab8129bf3a26488f9fb72c6984703aa65bf81f5708e6ca9ea6471b77005d03d)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
 [![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](#ai-integration)
@@ -218,9 +218,9 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 
 <!-- virustotal-trust:start -->
 
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.3.
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.4.
 
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/6adfa06425351bed5b892bf83c0b1211597f7f716ce6b8c7cefeb8b3254b3636).
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/fab8129bf3a26488f9fb72c6984703aa65bf81f5708e6ca9ea6471b77005d03d).
 <!-- virustotal-trust:end -->
 
 ## Financial Disclaimer and Risk Notice

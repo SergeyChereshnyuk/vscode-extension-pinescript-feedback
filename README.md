@@ -3,6 +3,7 @@ Pine Script DevKit brings complete Pine Script v6 language intelligence to VS Co
 Pine Script DevKit brings Pine Script development tools to VS Code for building TradingView indicators, strategies, and libraries. The extension provides language intelligence, documentation, diagnostics, navigation, formatting, templates, editor tooling, and GitHub Copilot integration in a single development experience. Create library scripts with the `library` snippet prefix; file templates are available for indicators and strategies.
 
 <!-- readme-badges:start -->
+
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
@@ -216,6 +217,7 @@ All settings are available in the VS Code Settings editor under **Pine Script**.
 ## Security
 
 <!-- virustotal-trust:start -->
+
 Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.6.3.
 
 Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/6adfa06425351bed5b892bf83c0b1211597f7f716ce6b8c7cefeb8b3254b3636).

@@ -2,9 +2,22 @@
 
 ## [Unreleased]
 
+### Added
+
+- History-consistency diagnostics now analyze calls into resolved third-party libraries (Tier 2 imports): resolved library members classify through the same AST effect pipeline as built-ins, including transitive method chains through imported types.
+- TradingView error-cascade parity: a variable bound to an expression carrying a hard type error now reports `Undeclared identifier` at its field-access uses, exactly where TradingView does.
+- Compound `or` guards now match TradingView: a bar-variant operand (e.g. `barstate.isconfirmed or someInput`) keeps history-consistency warnings active regardless of operand order.
+
 ### Improved
 
-- The TradingView parity guard now covers the entire diagnostics test corpus (all 842 scripts, including TradingView's built-in script set) with zero unexplained divergences; the last parked parity gap (switch arms after a comma-tail assignment) is verified closed after the grammar WASM refresh.
+- Absolute TradingView parity: the corpus baseline guard now compares raw engine output against raw TradingView server-compile output across all 842 corpus scripts with zero divergences — the typed-exclusions file and every comparator filter mechanism were deleted, and a policy guard prevents their reintroduction.
+- Diagnostics anchored inside wrapped multiline statements now report at the statement's start line with TradingView's joined-column attribution.
+- The unified Pine type resolver is memoized per run, types numeric for-loop counters, specializes polymorphic numeric built-ins (`nz`, `math.max/min/round/sqrt`), and now backs branch return-type checking and numeric-kind classification.
+
+### Fixed
+
+- Corrected built-in metadata for all eight `timeframe.is*` variables (`isdaily`, `isweekly`, `ismonthly`, `isintraday`, `isseconds`, `isminutes`, `isticks`, `isdwm`): they are `simple bool`, not `series float` (official Pine v6 reference).
+- Corrected built-in metadata for `time_tradingday` and `timenow`: both are `series int` UNIX times, not `series float` (official Pine v6 reference).
 
 ## [2.6.1] 2026-07-18
 

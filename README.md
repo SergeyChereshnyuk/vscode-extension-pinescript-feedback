@@ -240,12 +240,12 @@ Pine Script DevKit is an independent project and is not affiliated with, endorse
 This extension is provided under the MIT License. The warranty disclaimer and limitation of liability in the `LICENSE` file apply to the maximum extent permitted by applicable law.
 
 <!-- readme-badges:prerelease:start -->
-<!-- virustotal-release-version:2.5.5 -->
-
+<!-- virustotal-release-version:2.6.2 -->
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/49074408f15bc509d5df3399dfbfb819d7a5246797e315b3fe88fb1bb54f3d90)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/752a0886d50b3030a8892450e4f973c1ccf988f70a31a08fb83a4e384c0a546a)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
+[![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](#ai-integration)
 <!-- readme-badges:prerelease:end -->

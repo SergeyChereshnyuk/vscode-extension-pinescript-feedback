@@ -28,7 +28,7 @@ Stop hunting through documentation. Autocomplete, hover docs, and signature help
 
 Hover any built-in and follow **View in Pine Script Reference** to open the official TradingView page. Semantic highlighting keeps your own symbols visually distinct from built-ins.
 
-![Namespace autocomplete with signature help](assets/screenshots/intellisense.png)
+![Namespace autocomplete with signature help](assets/screenshots/intellisense.gif)
 
 ## Catch mistakes as you type
 

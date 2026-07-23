@@ -1,5 +1,38 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+
+- Missing required arguments on built-in calls are now reported, for example `ta.ema` called without a length.
+- Calls to user functions with too many arguments are now reported.
+- Calls to user functions that omit a required argument without a default are now reported.
+- Assigning a void expression to a variable is now reported as an error.
+- Declaring a variable as bare `na` without a type keyword is now reported as an error.
+- Assigning a tuple result to a single variable is now reported as an error.
+- Tuple declarations whose variable count does not match the returned value count are now reported.
+- Redeclaring an identifier in the same scope is now reported as an error.
+- Reading a field from a value that has no fields, such as `close.foo`, is now reported.
+- Unknown methods on collection receivers are now reported, for example `arr.nosuch` on an array binding.
+- Map keys are now type checked against the map declaration in positional, named and method call spellings.
+- Comparing a value to `na` with `==` or `!=` is now reported as an error that points to the `na` function.
+- Iterating a non collection value with `for in` is now reported.
+- Incompatible result types across `if` and `switch` branches are now reported in value and return positions.
+
+### Fixed
+
+- A type cast now keeps the series qualifier of its operand, so an `int` cast of `close` passed where a simple value is required is reported.
+- The last statement of a multi statement `else` branch is now resolved correctly when branch result types are checked.
+- Metadata for several built-ins wrongly marked optional parameters as required and is now corrected with compiler evidence. This covers the plot family, hline, the input family, `label.new`, `line.new`, `str.format`, `array.from` and `array.slice`.
+- Missing single argument overloads were added for `ta.highest`, `ta.lowest`, `ta.highestbars` and `ta.lowestbars`.
+
+## [2.7.4] 2026-07-22
+
+### Fixed
+
+- Corrected diagnostics that previously flagged valid code using identifier-legal keywords such as `enum` in supported positions.
+- Reduced false negatives so more real issues involving stop words and keyword callees are reported.
+
 ## [2.7.3] 2026-07-22
 
 ### Added

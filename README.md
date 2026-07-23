@@ -1,6 +1,7 @@
 Build TradingView indicators, strategies, and libraries in VS Code with full Pine Script v6 language intelligence.
 
 <!-- readme-badges:start -->
+
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
@@ -122,6 +123,7 @@ If Pine Script DevKit helps your workflow, you can [buy me a coffee](https://buy
 ## Security
 
 <!-- virustotal-trust:start -->
+
 Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.7.4.
 
 Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/665bdafbcb3294fe1ecd1024243447fc6af4e6684ff71e1bdcd8318c3d6618a2).

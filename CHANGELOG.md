@@ -1,30 +1,51 @@
 # Changelog
 
+## [2.7.5] 2026-07-23
+
+### Added
+
+- Diagnostics now flag incorrect built-in and user-defined function call argument counts.
+- Diagnostics now report redeclaring the same name within one scope.
+- Diagnostics now catch illegal assignments from void and na values.
+- Diagnostics now detect duplicated parameter names in function definitions.
+- Diagnostics now report calls to unknown methods on resolved values.
+- Diagnostics now validate map key types across all supported call forms.
+- Diagnostics now flag field access on values that have no fields.
+- Diagnostics now report `for in` loops over values that are not collections.
+- Diagnostics now catch direct comparisons against na.
+- Diagnostics now check branch result compatibility across `if`, `switch`, and `else if` chains.
+
+### Improved
+
+- Corrected optional flags and missing single argument overloads for several built-in functions.
+- Reduced diagnostics processing time for large scripts.
+
 ## [Unreleased]
 
 ### Added
 
-- Missing required arguments on built-in calls are now reported, for example `ta.ema` called without a length.
-- Calls to user functions with too many arguments are now reported.
-- Calls to user functions that omit a required argument without a default are now reported.
-- Assigning a void expression to a variable is now reported as an error.
-- Declaring a variable as bare `na` without a type keyword is now reported as an error.
-- Assigning a tuple result to a single variable is now reported as an error.
-- Tuple declarations whose variable count does not match the returned value count are now reported.
-- Redeclaring an identifier in the same scope is now reported as an error.
-- Reading a field from a value that has no fields, such as `close.foo`, is now reported.
-- Unknown methods on collection receivers are now reported, for example `arr.nosuch` on an array binding.
-- Map keys are now type checked against the map declaration in positional, named and method call spellings.
-- Comparing a value to `na` with `==` or `!=` is now reported as an error that points to the `na` function.
-- Iterating a non collection value with `for in` is now reported.
-- Incompatible result types across `if` and `switch` branches are now reported in value and return positions.
+- Assigning a tuple returned by a user method call to a single variable is now reported.
+- Tuple declarations over `request.security` are now counted against the tuple expression passed to the call.
+- Assigning a tuple literal to a single variable, for example `x = [1, 2]`, is now reported.
+- Ternary branches that return tuples are now reported with the TradingView wording that points to `if` and `switch`.
+- Passing a tuple returning call as a function argument is now reported, for example the `ta.macd` result used directly inside `plot`.
+- Using `var` or `varip` before a tuple declaration is now reported at the keyword, matching the TradingView anchor.
+- Nested tuple declarations are now reported once at the inner bracket instead of producing unrelated undeclared identifier errors.
+- A `for in` tuple declaration that does not name exactly two variables is now reported.
+- Variables declared by tuple destructuring now carry their per position element types and qualifiers, so misusing an element is reported, for example passing a macd line where a simple length is expected.
+- Tuple overloads that are not a builtin first signature are now selected by argument count, so misusing the three argument form of `ta.vwap` is reported.
+- A tuple passed into a user type parameter is now reported, matching the compiler.
+- An invalid element inside a tuple declaration, for example a field access, is now reported at that element with its own message.
+- Reassigning or compound assigning a scalar to a variable that holds a tuple result now reports the second error the compiler shows.
 
 ### Fixed
 
-- A type cast now keeps the series qualifier of its operand, so an `int` cast of `close` passed where a simple value is required is reported.
-- The last statement of a multi statement `else` branch is now resolved correctly when branch result types are checked.
-- Metadata for several built-ins wrongly marked optional parameters as required and is now corrected with compiler evidence. This covers the plot family, hline, the input family, `label.new`, `line.new`, `str.format`, `array.from` and `array.slice`.
-- Missing single argument overloads were added for `ta.highest`, `ta.lowest`, `ta.highestbars` and `ta.lowestbars`.
+- Tuple destructuring with `:=` no longer adds undeclared identifier errors next to the operator diagnostic.
+- The tuple subscript diagnostic now derives its type label from resolved element types instead of a literal guess.
+- The `str.upper` source parameter type is now recorded with compiler evidence, so misusing a numeric value there is reported.
+- Comments inside or after a tuple literal no longer change its size, removing a false count mismatch on wrapped tuples and a missed tuple assignment error behind a trailing comment.
+- An arrow after a bracket list no longer draws the nested tuple declaration message.
+- Overloaded functions that pair a tuple body with a scalar body are matched by argument count again, restoring the tuple subscript error.
 
 ## [2.7.4] 2026-07-22
 

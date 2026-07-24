@@ -1,11 +1,10 @@
 Build TradingView indicators, strategies, and libraries in VS Code with full Pine Script v6 language intelligence.
 
 <!-- readme-badges:start -->
-
 [![Version](https://vsmarketplacebadges.dev/version-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Installs](https://vsmarketplacebadges.dev/installs-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
 [![Rating](https://vsmarketplacebadges.dev/rating-short/chereshnyuk.chereshnyuk-com-pinescript.png)](https://marketplace.visualstudio.com/items?itemName=chereshnyuk.chereshnyuk-com-pinescript)
-[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/665bdafbcb3294fe1ecd1024243447fc6af4e6684ff71e1bdcd8318c3d6618a2)
+[![VirusTotal](https://img.shields.io/badge/VirusTotal-0%2F74-brightgreen)](https://www.virustotal.com/gui/file/85a05c16f408e59ac6cf664acb794addc11a507cacac96e76c9a913485a7a2b4)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Pine Script v6](https://img.shields.io/badge/Pine%20Script-v6-2962FF)](https://www.tradingview.com/pine-script-docs/)
 [![MCP](https://img.shields.io/badge/MCP-server-6E56CF)](#ai-integration)
@@ -123,10 +122,9 @@ If Pine Script DevKit helps your workflow, you can [buy me a coffee](https://buy
 ## Security
 
 <!-- virustotal-trust:start -->
+Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.7.6.
 
-Each published VSIX is scanned with VirusTotal before Marketplace release for version 2.7.4.
-
-Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/665bdafbcb3294fe1ecd1024243447fc6af4e6684ff71e1bdcd8318c3d6618a2).
+Detections: 0/74. [View report on VirusTotal](https://www.virustotal.com/gui/file/85a05c16f408e59ac6cf664acb794addc11a507cacac96e76c9a913485a7a2b4).
 <!-- virustotal-trust:end -->
 
 ## Disclaimer

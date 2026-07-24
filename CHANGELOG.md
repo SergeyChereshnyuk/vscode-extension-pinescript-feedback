@@ -1,5 +1,22 @@
 # Changelog
 
+## [2.7.6] 2026-07-23
+
+### Added
+
+- Added type checking for tuples so element types and qualifiers now carry through to destructured variable names.
+- Added new diagnostics for common tuple mistakes including tuple literal initializers, tuple returns in ternary expressions, tuple declarations with `var`, nested tuple targets, invalid tuple target components, and tuple arity mismatches in `for` loops.
+
+### Improved
+
+- Improved detection of tuples used in unsupported places such as function argument slots and user defined type parameters.
+
+## [Unreleased]
+
+### Added
+
+- Passing a wrongly typed argument to many more built-in functions is now reported, including math, string, array, matrix, ticker, color, and technical analysis calls.
+
 ## [2.7.5] 2026-07-23
 
 ### Added
@@ -19,33 +36,6 @@
 
 - Corrected optional flags and missing single argument overloads for several built-in functions.
 - Reduced diagnostics processing time for large scripts.
-
-## [Unreleased]
-
-### Added
-
-- Assigning a tuple returned by a user method call to a single variable is now reported.
-- Tuple declarations over `request.security` are now counted against the tuple expression passed to the call.
-- Assigning a tuple literal to a single variable, for example `x = [1, 2]`, is now reported.
-- Ternary branches that return tuples are now reported with the TradingView wording that points to `if` and `switch`.
-- Passing a tuple returning call as a function argument is now reported, for example the `ta.macd` result used directly inside `plot`.
-- Using `var` or `varip` before a tuple declaration is now reported at the keyword, matching the TradingView anchor.
-- Nested tuple declarations are now reported once at the inner bracket instead of producing unrelated undeclared identifier errors.
-- A `for in` tuple declaration that does not name exactly two variables is now reported.
-- Variables declared by tuple destructuring now carry their per position element types and qualifiers, so misusing an element is reported, for example passing a macd line where a simple length is expected.
-- Tuple overloads that are not a builtin first signature are now selected by argument count, so misusing the three argument form of `ta.vwap` is reported.
-- A tuple passed into a user type parameter is now reported, matching the compiler.
-- An invalid element inside a tuple declaration, for example a field access, is now reported at that element with its own message.
-- Reassigning or compound assigning a scalar to a variable that holds a tuple result now reports the second error the compiler shows.
-
-### Fixed
-
-- Tuple destructuring with `:=` no longer adds undeclared identifier errors next to the operator diagnostic.
-- The tuple subscript diagnostic now derives its type label from resolved element types instead of a literal guess.
-- The `str.upper` source parameter type is now recorded with compiler evidence, so misusing a numeric value there is reported.
-- Comments inside or after a tuple literal no longer change its size, removing a false count mismatch on wrapped tuples and a missed tuple assignment error behind a trailing comment.
-- An arrow after a bracket list no longer draws the nested tuple declaration message.
-- Overloaded functions that pair a tuple body with a scalar body are matched by argument count again, restoring the tuple subscript error.
 
 ## [2.7.4] 2026-07-22
 

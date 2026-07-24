@@ -1,5 +1,11 @@
 # Changelog
 
+## [2.7.7] 2026-07-24
+
+### Improved
+
+- Type checking now covers 168 more built-in function parameters, so passing a wrongly typed argument to many more built-in functions is reported to match the compiler.
+
 ## [2.7.6] 2026-07-23
 
 ### Added

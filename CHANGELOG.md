@@ -11,12 +11,6 @@
 
 - Improved detection of tuples used in unsupported places such as function argument slots and user defined type parameters.
 
-## [Unreleased]
-
-### Added
-
-- Passing a wrongly typed argument to many more built-in functions is now reported, including math, string, array, matrix, ticker, color, and technical analysis calls.
-
 ## [2.7.5] 2026-07-23
 
 ### Added
